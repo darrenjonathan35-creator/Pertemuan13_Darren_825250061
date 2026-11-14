@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #26364b;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.topbar {
+    background: #26364b;
+    color: white;
+    padding: 12px 7%;
+    font-size: 14px;
+}
+
+.topbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-arrow {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.topbar-button {
+    background: white;
+    color: #26364b !important;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.topbar-button:hover {
+    background: #009fda;
+    color: white !important;
+}
+
+
+
+.navbar {
+    min-height: 90px;
+    padding: 15px 0;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-image {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #20334d;
+}
+
+.navbar-nav {
+    gap: 18px;
+}
+
+.navbar-nav .nav-link {
+    color: #171717;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #009fda;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background: #eaf7fc;
+    color: #009fda;
+}
+
+
+
+.carousel-item {
+    height: 630px;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.43);
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    bottom: auto;
+    transform: translateY(-40%);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-subtitle {
+    display: block;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.carousel-caption h1 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 70px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.discover-button {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.discover-button:hover {
+    background: #009fda;
+    border-color: #009fda;
+    color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    z-index: 3;
+}
+
+.carousel-indicators {
+    z-index: 4;
+}
+
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.light-section {
+    background: #f4f8fb;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    display: inline-block;
+    color: #009fda;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    color: #26364b;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.section-title p,
+.section-description {
+    color: #777;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+.main-button {
+    display: inline-block;
+    background: #009fda;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #26364b;
+    color: white;
+}
+
+
+.about-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#about .section-heading {
+    text-align: left;
+}
+
+#about .section-description {
+    margin-bottom: 15px;
+}
+
+
+.yacht-card {
+    background: white;
+    height: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.yacht-card:hover {
+    transform: translateY(-8px);
+}
+
+.yacht-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 21px;
+    color: #26364b;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card-content a {
+    display: inline-block;
+    color: #009fda;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+.offer-card {
+    padding: 40px 25px;
+    background: white;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    border-radius: 7px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.offer-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+    transform: translateY(-5px);
+}
+
+.offer-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.offer-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.offer-card p {
+    color: #777;
+    line-height: 1.7;
+}
+
+
+.destination-card {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    height: 100%;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 22px;
+}
+
+.destination-info h3 {
+    font-size: 21px;
+}
+
+.destination-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+.feature-box {
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.feature-box h3 {
+    color: #009fda;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.testimonial-section {
+    background: #26364b;
+    color: white;
+    padding: 90px 0;
+}
+
+.testimonial-section .section-heading {
+    color: white;
+}
+
+.testimonial-content {
+    max-width: 750px;
+    margin: 35px auto 0;
+}
+
+.testimonial-content p {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #e2e8f0;
+    font-style: italic;
+}
+
+.testimonial-content h4 {
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.testimonial-content span {
+    color: #9ccfe4;
+    font-size: 14px;
+}
+
+
+
+.team-card {
+    text-align: center;
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-card h3 {
+    font-size: 20px;
+}
+
+.team-card p {
+    color: #009fda;
+    font-size: 14px;
+}
+
+
+.blog-card {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    height: 100%;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+
+
+.contact-banner {
+    background: #26364b;
+    padding: 75px 15px;
+    color: white;
+}
+
+.contact-banner h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.contact-banner p {
+    color: #d5e0eb;
+    margin-bottom: 25px;
+}
+
+
+.footer {
+    background: #18283c;
+    color: white;
+    padding: 60px 0 0;
+}
+
+.footer h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer h4 {
+    font-size: 19px;
+    margin-bottom: 22px;
+}
+
+.footer p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #009fda;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #526174;
+    text-align: center;
+    padding: 22px 0;
+    margin-top: 35px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+.scroll-up {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background: #009fda;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1050;
+    transition: 0.3s;
+}
+
+.scroll-up:hover {
+    background: #26364b;
+    transform: translateY(-4px);
+}
+
+
+
+.chat-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #009fda;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1050;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.chat-button:hover {
+    background: #26364b;
+    transform: scale(1.08);
+}
+
+
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        gap: 5px;
+        padding-top: 15px;
+    }
+
+    .carousel-item {
+        height: 500px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 48px;
+    }
+
+    .carousel-caption p {
+        font-size: 20px;
+    }
+
+    .section-heading {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .topbar {
+        padding: 10px 4%;
+        font-size: 11px;
+    }
+
+    .topbar-button {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .logo-image {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 19px;
+    }
+
+    .carousel-item {
+        height: 430px;
+    }
+
+    .carousel-caption {
+        left: 5%;
+        right: 5%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 34px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .discover-button {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .contact-banner h2 {
+        font-size: 26px;
+    }
+
+    .scroll-up {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .chat-button {
+        right: 15px;
+        bottom: 20px;
+    }
+}
